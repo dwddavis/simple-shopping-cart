@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script src="js/application.js"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container mx-2">
+      <h1 class="col-12 my-4" id="tophead">Shopping Cart</h1>
+      <div class="row">
+        <div class="col-12">
+          <table class="table responsive-table">
+            <thead>
+              <tr>
+                <th scope ="col"> Item </th>
+                <th scope ="col"> Cost </th>
+                <th scope ="col"> Quantity </th>
+                <th scope ="col"> Remove </th>
+                <th scope ="col"> Total </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="item">Salmon</td>
+                <td class="cost">60.00</td>
+                <td class="quantity"><span id="qty">QTY </span><input type="numbers" value="1"/></td>
+                <td><button class="btn btn-light btn-sm remove">remove</button></td>
+                <td class="itemTotal"></td>
+              </tr>
+              <tr>
+                <td class="item">Tuna</td>
+                <td class="cost">50.00</td>
+                <td class="quantity"><span id="qty">QTY </span><input type="numbers" value="1"/></td>
+                <td><button class="btn btn-light btn-sm remove">remove</button></td>
+                <td class="itemTotal"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <form class="col-12 mt-2" id="addItem">
+          <input class="mx-2
+
+          " name="item" type="text" placeholder="Item" required/>
+          <input class="mx-2" name="cost" type="number" placeholder="Cost"/>
+          <button class="btn btn-warning btn sm" id="addButton"> add</button>
+        </div>
+        <h1 class="col-12 my-4" id="bottomhead"><span>Total Price:   </span><span id="cartTotal"></span></h1>
+      </div>
+  </body>
+</html>

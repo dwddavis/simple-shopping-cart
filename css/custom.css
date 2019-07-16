@@ -1,0 +1,11 @@
+td{
+  border-top:none !important;
+}
+
+th{
+  border-bottom: none !important;
+}
+
+#qty{
+  font-weight:bold ;
+}
