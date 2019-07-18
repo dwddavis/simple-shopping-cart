@@ -2,10 +2,24 @@ td{
   border-top:none !important;
 }
 
+table{
+  max-width: 600px !important;
+}
+
+
 th{
   border-bottom: none !important;
 }
 
 #qty{
   font-weight:bold ;
+}
+
+input{
+  width: 50px !important;
+}
+
+form input{
+
+width: 180px !important;
 }

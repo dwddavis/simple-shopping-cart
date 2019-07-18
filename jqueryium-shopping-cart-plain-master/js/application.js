@@ -1,5 +1,5 @@
 var eachItemTotal = function(ele) {
-    var itemCost = parseFloat($(ele).find('.cost').text());
+    var itemCost = parseFloat($(ele).find('.costpart').text());
     var itemQuantity = parseFloat($(ele).find('.quantity input').val());
 
     var itemTotal = itemCost * itemQuantity;
@@ -30,11 +30,10 @@ var cartTotalCondensed = cartTotalArray.reduce(sum);
   $(document).ready(function(){
     updateCart();
 
-    $('.btn.remove').on('click',function(event){
-      $(this).closest('tr').remove();
-      updateCart();
-
-      });
+  $(document).on('click', '.btn.remove', function (event) {
+  $(this).closest('tr').remove();
+  updateCart();
+  });
 
       var timeout;
       $(document).on('input', 'tr input',function () {
@@ -52,7 +51,7 @@ var cartTotalCondensed = cartTotalArray.reduce(sum);
 
       $('tbody').append('<tr>' +
       '<td class="item">' + item + '</td>' +
-      '<td class="cost"><span>$</span>' + cost + '</td>' +
+      '<td class="cost"><span>$</span><span class="costpart">' + cost + '</span></td>' +
       '<td class="quantity"><span id="qty">QTY </span><input type="number" value="1"/></td>' +
       '<td><button class="btn btn-light btn-sm remove">remove</button></td>' +
       '<td class="itemTotal"></td>' +
